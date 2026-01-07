@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFINITY PICTURES | Premium Photography Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional photography services in Sri Lanka by Manoj Madhushanka. Wedding, portrait, event, and commercial photography in Colombo.">
+    <meta name="keywords" content="photography Sri Lanka, wedding photography Colombo, portrait photography, event photography, commercial photography, Infinity Pictures">
+    <meta name="author" content="Manoj Madhushanka - Infinity Pictures">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="INFINITY PICTURES | Premium Photography Portfolio">
+    <meta property="og:description" content="Professional photography services in Sri Lanka">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32">
+    <meta property="og:url" content="https://infinitypictures.lk">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/camera.png">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Light Mode Colors */
+            --primary-color: #0a0a0a;
+            --secondary-color: #8b7355;
+            --accent-color: #d4af37;
+            --bg-color: #f9f7f4;
+            --surface-color: #ffffff;
+            --text-color: #333333;
+            --text-secondary: #666666;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --overlay: rgba(0, 0, 0, 0.6);
+            
+            /* Transitions */
+            --transition-slow: 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-medium: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-fast: 0.3s ease;
+            
+            /* Typography */
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+        }
+
+        .dark-mode {
+            /* Dark Mode Colors */
+            --primary-color: #ffffff;
+            --secondary-color: #c19a6b;
+            --accent-color: #e6c362;
+            --bg-color: #0c0c0c;
+            --surface-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --glass-bg: rgba(30, 30, 30, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --overlay: rgba(0, 0, 0, 0.85);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color var(--transition-medium), color var(--transition-medium);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Advanced Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .camera-animation {
+            position: relative;
+            width: 220px;
+            height: 170px;
+            margin-bottom: 50px;
+            perspective: 1000px;
+        }
+
+        .camera-body {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(135deg, #222, #111);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            animation: cameraFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes cameraFloat {
+            0%, 100% { transform: translateY(0) rotateX(5deg); }
+            50% { transform: translateY(-15px) rotateX(5deg); }
+        }
+
+        .camera-lens {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle at 30% 30%, #666, #222);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 10px solid #111;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: lensGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes lensGlow {
+            0%, 100% { box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.3); }
+            50% { box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 50px rgba(212, 175, 55, 0.6); }
+        }
+
+        .lens-inner {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle at 30% 30%, #444, #000);
+            border-radius: 50%;
+            border: 4px solid #666;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lens-inner:after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 30%;
+            height: 30%;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(5px);
+        }
+
+        .camera-flash {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: radial-gradient(circle, #555, #222);
+            border-radius: 50%;
+            top: 20px;
+            right: 35px;
+            animation: flashPulse 2s infinite;
+        }
+
+        @keyframes flashPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .camera-grip {
+            position: absolute;
+            width: 70px;
+            height: 90px;
+            background: linear-gradient(to right, #333, #222);
+            border-radius: 15px;
+            right: -35px;
+            top: 45px;
+            transform: rotate(5deg);
+        }
+
+        .shutter-button {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: radial-gradient(circle, #d4af37, #b8941f);
+            border-radius: 50%;
+            bottom: 25px;
+            right: 35px;
+            cursor: pointer;
+            animation: shutterPulse 1.5s infinite;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        @keyframes shutterPulse {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
+            50% { transform: scale(1.2); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
+        }
+
+        .shutter-ring {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            bottom: 20px;
+            right: 30px;
+            animation: ringExpand 2s infinite;
+        }
+
+        @keyframes ringExpand {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .skip-animation {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: var(--transition-fast);
+            backdrop-filter: blur(10px);
+            letter-spacing: 1px;
+        }
+
+        .skip-animation:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .brand-reveal {
+            font-family: var(--font-secondary);
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            letter-spacing: 5px;
+            font-weight: 700;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .brand-reveal:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            animation: lineExpand 2s forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes lineExpand {
+            0% { width: 0; }
+            100% { width: 300px; }
+        }
+
+        /* Advanced Flash Effect */
+        .flash-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, white 0%, transparent 70%);
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+            transition: var(--transition-medium);
+        }
+
+        .logo {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+            margin-left: 5px;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            transition: var(--transition-fast);
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a i {
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-left: 30px;
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .theme-toggle:hover:before {
+            left: 100%;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--accent-color);
+            color: var(--surface-color);
+            transform: rotate(30deg);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 100%;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            transition: var(--transition-fast);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 5%;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(var(--overlay), var(--overlay)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: zoomEffect 20s infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: var(--font-secondary);
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(30px);
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 45px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: var(--surface-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            transition: var(--transition-fast);
+            border: none;
+            opacity: 0;
+            transform: translateY(30px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            gap: 10px;
+        }
+
+        .cta-button i {
+            font-size: 1.2rem;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.8s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .shutter-sound {
+            display: none;
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 5%;
+            background-color: var(--surface-color);
+            position: relative;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition-medium);
+        }
+
+        .about-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: var(--transition-medium);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .signature {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-top: 30px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .signature i {
+            color: var(--secondary-color);
+        }
+
+        /* Services Section */
+        .section {
+            padding: 120px 5%;
+        }
+
+        .section-title {
+            font-family: var(--font-secondary);
+            font-size: 3.2rem;
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--surface-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--shadow);
+            transition: var(--transition-medium);
+            position: relative;
+            padding-bottom: 35px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px var(--shadow);
+        }
+
+        .service-img {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition-medium);
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-title {
+            font-family: var(--font-secondary);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .service-title i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .service-desc {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            gap: 15px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 2px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-btn i {
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .filter-btn:hover:before {
+            left: 100%;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent-color);
+            color: var(--surface-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-medium);
+            background-color: #f0f0f0;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: var(--transition-medium);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .portfolio-overlay h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: white;
+            transform: translateY(20px);
+            transition: var(--transition-medium);
+            transition-delay: 0.1s;
+        }
+
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            transform: translateY(20px);
+            transition: var(--transition-medium);
+            transition-delay: 0.2s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay h3,
+        .portfolio-item:hover .portfolio-overlay p {
+            transform: translateY(0);
+        }
+
+        .portfolio-actions {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: var(--transition-medium);
+            transition-delay: 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-actions {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-action-btn {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-action-btn:hover {
+            transform: scale(1.1);
+            background: var(--secondary-color);
+        }
+
+        /* Contact Me Section */
+        .contact-me {
+            padding: 120px 5%;
+            background-color: var(--surface-color);
+        }
+
+        .contact-form-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: var(--bg-color);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 1px solid var(--glass-border);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group label i {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--glass-border);
+            border-radius: 12px;
+            background-color: var(--surface-color);
+            color: var(--text-color);
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+            font-family: var(--font-primary);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: var(--surface-color);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn i {
+            font-size: 1.3rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        .contact-details-side {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-info-card {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition-medium);
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-info-card h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info-card h3 i {
+            color: var(--accent-color);
+        }
+
+        .contact-info-card h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .contact-text a, .contact-text p {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            font-size: 1.05rem;
+        }
+
+        .contact-text a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--surface-color);
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: var(--transition-medium);
+            text-decoration: none;
+            box-shadow: 0 8px 25px var(--shadow);
+            border: 1px solid var(--glass-border);
+        }
+
+        .social-icon:hover {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: var(--surface-color);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--shadow);
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+
+        /* Login Modal */
+        .login-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-medium);
+            backdrop-filter: blur(10px);
+        }
+
+        .login-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .login-container {
+            background-color: var(--surface-color);
+            border-radius: 25px;
+            width: 90%;
+            max-width: 480px;
+            padding: 60px 50px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform: translateY(30px) scale(0.9);
+            transition: var(--transition-medium);
+            border: 1px solid var(--glass-border);
+        }
+
+        .login-modal.active .login-container {
+            transform: translateY(0) scale(1);
+        }
+
+        .close-login {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: var(--transition-fast);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close-login:hover {
+            color: var(--accent-color);
+            background-color: var(--bg-color);
+            transform: rotate(90deg);
+        }
+
+        .login-title {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 18px 20px;
+            margin-bottom: 25px;
+            border: 2px solid var(--glass-border);
+            border-radius: 12px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: var(--surface-color);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            margin-top: 15px;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--surface-color);
+            padding: 80px 5% 40px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-secondary);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo span {
+            color: var(--accent-color);
+            margin-left: 5px;
+        }
+
+        .footer-logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .copyright i {
+            color: var(--accent-color);
+        }
+
+        /* Image Modal */
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-medium);
+        }
+
+        .image-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            transform: scale(0.8);
+            transition: var(--transition-medium);
+        }
+
+        .image-modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            opacity: 0;
+            transform: translateY(20px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            z-index: 99;
+            text-decoration: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--glass-border);
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 99;
+            text-decoration: none;
+            transition: var(--transition-medium);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Success Message */
+        .success-message {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            z-index: 1002;
+            transform: translateX(400px);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            max-width: 350px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .success-message.show {
+            transform: translateX(0);
+        }
+
+        .success-message i {
+            font-size: 1.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            .section-title {
+                font-size: 2.8rem;
+            }
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .about-img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .contact-form-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--surface-color);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 100px;
+                transition: var(--transition-medium);
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
+                z-index: 99;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 0 0 30px 0;
+            }
+            
+            .theme-toggle {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .brand-reveal {
+                font-size: 3rem;
+            }
+            
+            .camera-animation {
+                width: 180px;
+                height: 140px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form {
+                padding: 35px;
+            }
+            
+            .contact-info-card {
+                padding: 35px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .whatsapp-float {
+                bottom: 90px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .brand-reveal {
+                font-size: 2.2rem;
+            }
+            
+            .camera-animation {
+                width: 150px;
+                height: 120px;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .contact-info-card {
+                padding: 25px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            
+            .success-message {
+                top: 80px;
+                right: 20px;
+                left: 20px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="camera-animation">
+            <div class="camera-body">
+                <div class="camera-lens">
+                    <div class="lens-inner"></div>
+                </div>
+                <div class="camera-flash"></div>
+                <div class="camera-grip"></div>
+                <div class="shutter-button" id="shutter-btn"></div>
+                <div class="shutter-ring"></div>
+            </div>
+        </div>
+        <div class="brand-reveal" id="brand-text">INFINITY PICTURES</div>
+        <div class="skip-animation" id="skip-btn">Skip Animation</div>
+        <div class="flash-effect" id="flash"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <i class="fas fa-camera logo-icon"></i>
+            INFINITY <span>PICTURES</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+            <li><a href="#contact-me"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Capturing Moments That Last Forever</h1>
+            <p>Professional photography services specializing in weddings, portraits, events, and commercial photography. Based in Colombo, serving clients across Sri Lanka.</p>
+            <a href="#contact-me" class="cta-button">
+                <i class="fas fa-calendar-check"></i> Book a Session
+            </a>
+        </div>
+        <!-- Hidden audio for shutter sound -->
+        <audio class="shutter-sound" id="shutterSound">
+            <source src="https://assets.mixkit.co/sfx/preview/mixkit-camera-shutter-click-1133.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://scontent.fcmb3-1.fna.fbcdn.net/v/t39.30808-6/448271207_2462610017426913_5097163127009003201_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=acH-nZ-qLJIQ7kNvgGMGopE&_nc_zt=23&_nc_ht=scontent.fcmb3-1.fna&_nc_gid=Ahqb-y4jMxql_riIKNk2gvT&oh=00_AYCcFFTtMqyfqJ0mPuzg6mtEGrwMiI8bXtHt3gF8IYHYNw&oe=67765D2E" alt="About Infinity Pictures">
+            </div>
+            <div class="about-content">
+                <h2>About Infinity Pictures</h2>
+                <p>Founded with a passion for capturing life's most precious moments, Infinity Pictures brings over a decade of professional photography experience to every project. Our team specializes in wedding photography, portrait sessions, and event coverage across Sri Lanka.</p>
+                <p>We believe that every moment tells a story, and our mission is to capture those stories with artistic vision and technical excellence. From intimate family portraits to grand wedding celebrations, we approach every project with the same dedication to quality and creativity.</p>
+                <p>Based in Colombo, our photography services have expanded to serve clients throughout Sri Lanka. We combine traditional photography techniques with modern technology to deliver stunning images that stand the test of time.</p>
+                <div class="signature">
+                    <i class="fas fa-signature"></i>
+                    Manoj Madhushanka
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://i.ibb.co/B5bqs4D7/1.jpg');"></div>
+                <div class="service-content">
+                    <h3 class="service-title"><i class="fas fa-ring"></i> Wedding Photography</h3>
+                    <p class="service-desc">Capturing your special day with elegance, emotion, and artistic vision. From traditional ceremonies to modern celebrations, we preserve every precious moment beautifully.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://scontent.fcmb3-1.fna.fbcdn.net/v/t39.30808-6/473217864_1178763857586321_4907145346425202020_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1DvxekNGt9MQ7kNvgEObEYV&_nc_zt=23&_nc_ht=scontent.fcmb3-1.fna&_nc_gid=A0Bbjr7hqIQq8dduLx2a8Y8&oh=00_AYB4NYMHVyN93KqFLJ4f50nN-tnC4p0h8ZOkZ11KcwDltw&oe=677659EA');"></div>
+                <div class="service-content">
+                    <h3 class="service-title"><i class="fas fa-user"></i> Portrait Photography</h3>
+                    <p class="service-desc">Professional portraits that capture personality and essence. Studio or outdoor sessions available for individuals, couples, families, and professional headshots.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://scontent.fcmb3-1.fna.fbcdn.net/v/t39.30808-6/473038244_853618650100845_8474238729698394133_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YZEGoGLGQVcQ7kNvgG6wgs7&_nc_zt=23&_nc_ht=scontent.fcmb3-1.fna&_nc_gid=ANPJrmgyfSU-J6qTQnD1K65&oh=00_AYDbvHwn39fHpmj9JpJ20dYnnjnRQi5P9qlF58Y2NJHpsw&oe=67766DF1');"></div>
+                <div class="service-content">
+                    <h3 class="service-title"><i class="fas fa-calendar-alt"></i> Event Photography</h3>
+                    <p class="service-desc">Birthday parties, corporate events, ceremonies, and special occasions captured professionally to tell your story with dynamic, candid shots and group photos.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://scontent.fcmb3-1.fna.fbcdn.net/v/t39.30808-6/473039634_1178763897586317_1117147236357862454_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vM4Bf2D25UoQ7kNvgEfxU_6&_nc_zt=23&_nc_ht=scontent.fcmb3-1.fna&_nc_gid=A--TdT96WjnI2INu2FgYep_&oh=00_AYDdE4oTdJVQ9YSt_vwjgz1akTzE0Z-bkihISjwPvyZQSw&oe=67766BDA');"></div>
+                <div class="service-content">
+                    <h3 class="service-title"><i class="fas fa-tree"></i> Outdoor Photography</h3>
+                    <p class="service-desc">Creative outdoor photography sessions in beautiful natural or urban settings. Perfect for pre-wedding shoots, engagement photos, and location-based portraits.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://scontent.fcmb3-1.fna.fbcdn.net/v/t39.30808-6/472830887_551196000343113_3336909015831177848_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9txryX3KmnkQ7kNvgF6yBzt&_nc_zt=23&_nc_ht=scontent.fcmb3-1.fna&_nc_gid=AdlA5wx-r6G8u_FkC6Qnx_B&oh=00_AYDkM2tE1ir_XrTfkm8D7ZQYfX8UUPdZ2e32T0C3u7-Isw&oe=67765C83');"></div>
+                <div class="service-content">
+                    <h3 class="service-title"><i class="fas fa-briefcase"></i> Commercial Photography</h3>
+                    <p class="service-desc">High-quality product and commercial photography for brands, businesses, advertising, and e-commerce. Professional studio setups with advanced lighting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <h2 class="section-title">Portfolio Gallery</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="wedding">
+                    <i class="fas fa-ring"></i> Wedding
+                </button>
+                <button class="filter-btn" data-filter="portrait">
+                    <i class="fas fa-user"></i> Portrait
+                </button>
+                <button class="filter-btn" data-filter="event">
+                    <i class="fas fa-calendar-alt"></i> Event
+                </button>
+                <button class="filter-btn" data-filter="commercial">
+                    <i class="fas fa-briefcase"></i> Commercial
+                </button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be added dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section class="contact-me" id="contact-me">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h3 style="font-family: var(--font-secondary); font-size: 2rem; margin-bottom: 30px; color: var(--primary-color); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-comments"></i> Get In Touch
+                </h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i> Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">
+                            <i class="fas fa-camera"></i> Service Interested In
+                        </label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="wedding">Wedding Photography</option>
+                            <option value="portrait">Portrait Photography</option>
+                            <option value="event">Event Photography</option>
+                            <option value="outdoor">Outdoor Photography</option>
+                            <option value="commercial">Commercial Photography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="event-date">
+                            <i class="fas fa-calendar-day"></i> Event Date (If applicable)
+                        </label>
+                        <input type="date" id="event-date" name="event-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment-dots"></i> Your Message
+                        </label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your photography needs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contact-details-side">
+                <div class="contact-info-card">
+                    <h3>
+                        <i class="fas fa-address-card"></i> Contact Information
+                    </h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Photographer</h4>
+                            <p>Manoj Madhushanka</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a href="tel:+94711773038">+94 71 177 3038</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:infinitypictures.lk@gmail.com">infinitypictures.lk@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9am - 6pm</p>
+                            <p>Saturday: 10am - 4pm</p>
+                            <p>Sunday: By appointment</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-share-alt"></i> Follow Me
+                        </h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100063581541062" class="social-icon" target="_blank" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/94711773038" class="social-icon whatsapp-btn" target="_blank" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58571606938!2d79.80617512296987!3d6.921838419801926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1633359979062!5m2!1sen!2slk" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <div class="close-login" id="closeLogin">
+                <i class="fas fa-times"></i>
+            </div>
+            <h2 class="login-title">Client Portal</h2>
+            <form class="login-form" id="loginForm">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 25px; color: var(--text-secondary);">
+                Don't have an account? <a href="#" style="color: var(--accent-color);">Sign up here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <div class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <div>
+            <strong>Message Sent!</strong>
+            <p>I'll contact you soon.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">
+                    <i class="fas fa-camera"></i>
+                    INFINITY <span>PICTURES</span>
+                </div>
+                <p>Capturing timeless moments with artistic vision and technical excellence. Professional photography services across Sri Lanka.</p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://www.facebook.com/profile.php?id=100063581541062" class="social-icon" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/94711773038" class="social-icon whatsapp-btn" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: 20px; color: var(--primary-color);">Quick Links</h3>
+                <ul style="list-style: none; margin-top: 10px;">
+                    <li style="margin-bottom: 12px;">
+                        <a href="#home" style="color: var(--text-color); text-decoration: none; transition: var(--transition-fast); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chevron-right" style="color: var(--accent-color); font-size: 0.8rem;"></i> Home
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#about" style="color: var(--text-color); text-decoration: none; transition: var(--transition-fast); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chevron-right" style="color: var(--accent-color); font-size: 0.8rem;"></i> About
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#services" style="color: var(--text-color); text-decoration: none; transition: var(--transition-fast); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chevron-right" style="color: var(--accent-color); font-size: 0.8rem;"></i> Services
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#portfolio" style="color: var(--text-color); text-decoration: none; transition: var(--transition-fast); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chevron-right" style="color: var(--accent-color); font-size: 0.8rem;"></i> Portfolio
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 12px;">
+                        <a href="#contact-me" style="color: var(--text-color); text-decoration: none; transition: var(--transition-fast); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chevron-right" style="color: var(--accent-color); font-size: 0.8rem;"></i> Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: 20px; color: var(--primary-color);">Contact Details</h3>
+                <div class="contact-item" style="margin-top: 10px;">
+                    <div class="contact-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Photographer</h4>
+                        <p>Manoj Madhushanka</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Phone</h4>
+                        <a href="tel:+94711773038">+94 71 177 3038</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <a href="mailto:infinitypictures.lk@gmail.com">infinitypictures.lk@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Location</h4>
+                        <p>Colombo, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-family: var(--font-secondary); font-size: 1.5rem; margin-bottom: 20px; color: var(--primary-color);">Business Hours</h3>
+                <p style="margin-top: 10px; display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="far fa-clock" style="color: var(--accent-color);"></i>
+                    Monday - Friday: 9am - 6pm
+                </p>
+                <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="far fa-clock" style="color: var(--accent-color);"></i>
+                    Saturday: 10am - 4pm
+                </p>
+                <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <i class="far fa-clock" style="color: var(--accent-color);"></i>
+                    Sunday: By appointment only
+                </p>
+                <p style="margin-top: 20px; color: var(--accent-color); font-weight: 600; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-plane"></i> Available for travel throughout Sri Lanka
+                </p>
+            </div>
+        </div>
+        <div class="copyright">
+            <i class="far fa-copyright"></i> 2023 INFINITY PICTURES. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> for photography
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94711773038?text=Hi%20Infinity%20Pictures,%20I'm%20interested%20in%20your%20photography%20services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Preloader Animation
+        const preloader = document.getElementById('preloader');
+        const shutterBtn = document.getElementById('shutter-btn');
+        const brandText = document.getElementById('brand-text');
+        const skipBtn = document.getElementById('skip-btn');
+        const flash = document.getElementById('flash');
+        const shutterSound = document.getElementById('shutterSound');
+        
+        // Skip animation functionality
+        skipBtn.addEventListener('click', () => {
+            triggerShutter();
+        });
+        
+        // Auto-trigger the shutter after 2 seconds
+        setTimeout(() => {
+            triggerShutter();
+        }, 2000);
+        
+        // Manual shutter click
+        shutterBtn.addEventListener('click', triggerShutter);
+        
+        function triggerShutter() {
+            // Play shutter sound
+            shutterSound.currentTime = 0;
+            shutterSound.play().catch(e => console.log("Audio play failed:", e));
+            
+            // Advanced flash effect
+            flash.style.opacity = '0.9';
+            flash.style.transition = 'opacity 0.3s';
+            
+            setTimeout(() => {
+                flash.style.opacity = '0';
+            }, 300);
+            
+            // Hide camera and show brand text
+            setTimeout(() => {
+                document.querySelector('.camera-animation').style.opacity = '0';
+                document.querySelector('.camera-animation').style.transform = 'translateY(-50px) scale(0.8)';
+                document.querySelector('.camera-animation').style.transition = 'opacity 1s, transform 1s';
+                
+                brandText.style.opacity = '1';
+                brandText.style.transform = 'translateY(0)';
+                brandText.style.transition = 'opacity 1.5s cubic-bezier(0.23, 1, 0.32, 1), transform 1.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                
+                // Add glow effect to brand text
+                setTimeout(() => {
+                    brandText.style.textShadow = '0 0 30px rgba(212, 175, 55, 0.7)';
+                }, 1000);
+            }, 400);
+            
+            // Hide preloader after animation
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 1s ease';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    animateHeroContent();
+                }, 1000);
+            }, 3500);
+        }
+        
+        // Animate hero content
+        function animateHeroContent() {
+            const heroElements = document.querySelectorAll('.hero h1, .hero p, .cta-button');
+            heroElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                    el.style.transition = 'opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1)';
+                    
+                    // Add staggered animation for text
+                    if (index === 0) {
+                        el.style.transitionDelay = '0.2s';
+                    } else if (index === 1) {
+                        el.style.transitionDelay = '0.5s';
+                    } else {
+                        el.style.transitionDelay = '0.8s';
+                    }
+                }, 300 * (index + 1));
+            });
+        }
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            
+            const spans = hamburger.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                
+                const spans = hamburger.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Login Modal
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeLogin = document.getElementById('closeLogin');
+        
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeLogin.addEventListener('click', () => {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showSuccessMessage('Login successful! Redirecting to client portal...');
+            setTimeout(() => {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }, 2000);
+        });
+        
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !phone || !service || !message) {
+                showSuccessMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Show success message
+            showSuccessMessage(`Thank you, ${name}! Your message has been sent successfully.`);
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Add camera shutter effect
+            const shutterEffect = document.createElement('div');
+            shutterEffect.style.position = 'fixed';
+            shutterEffect.style.top = '0';
+            shutterEffect.style.left = '0';
+            shutterEffect.style.width = '100%';
+            shutterEffect.style.height = '100%';
+            shutterEffect.style.background = 'radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, transparent 70%)';
+            shutterEffect.style.zIndex = '9998';
+            shutterEffect.style.opacity = '0';
+            shutterEffect.style.transition = 'opacity 0.3s';
+            document.body.appendChild(shutterEffect);
+            
+            setTimeout(() => {
+                shutterEffect.style.opacity = '1';
+            }, 10);
+            
+            setTimeout(() => {
+                shutterEffect.style.opacity = '0';
+                setTimeout(() => {
+                    shutterEffect.remove();
+                }, 300);
+            }, 100);
+            
+            // Play shutter sound
+            shutterSound.currentTime = 0;
+            shutterSound.play().catch(e => console.log("Audio play failed:", e));
+            
+            // Send WhatsApp message (optional)
+            const whatsappMessage = `Hi Infinity Pictures,\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nMessage: ${message.substring(0, 100)}...`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            // Uncomment to enable WhatsApp auto-message
+            // window.open(`https://wa.me/94711773038?text=${encodedMessage}`, '_blank');
+        });
+        
+        // Success message function
+        function showSuccessMessage(message, type = 'success') {
+            const successMsg = document.getElementById('successMessage');
+            const icon = successMsg.querySelector('i');
+            const strong = successMsg.querySelector('strong');
+            const p = successMsg.querySelector('p');
+            
+            if (type === 'error') {
+                icon.className = 'fas fa-exclamation-circle';
+                successMsg.style.background = 'linear-gradient(135deg, #ff4757, #ff3838)';
+                strong.textContent = 'Error!';
+            } else {
+                icon.className = 'fas fa-check-circle';
+                successMsg.style.background = 'linear-gradient(135deg, var(--accent-color), var(--secondary-color))';
+                strong.textContent = 'Success!';
+            }
+            
+            p.textContent = message;
+            successMsg.classList.add('show');
+            
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+        }
+        
+
+    // Portfolio Data - WORKING IMGBB LINKS
+        const portfolioItems = [
+            // Wedding Photos (30 images)
+    { category: 'wedding', image: 'https://i.ibb.co/B5bqs4D7/1.jpg', title: 'Traditional Wedding' },
+    { category: 'wedding', image: 'https://i.ibb.co/5Xj2BfQQ/2.jpg', title: 'Wedding Celebration' },
+    { category: 'wedding', image: 'https://i.ibb.co/spZ2Bps3/3.jpg', title: 'Bride & Groom' },
+    { category: 'wedding', image: 'https://i.ibb.co/Rp61xr63/4.jpg', title: 'Wedding Ceremony' },
+    { category: 'wedding', image: 'https://i.ibb.co/d4HBWGBq/5.jpg', title: 'Wedding Portraits' },
+    { category: 'wedding', image: 'https://i.ibb.co/G4ZSDZft/6.jpg', title: 'Traditional Ceremony' },
+    { category: 'wedding', image: 'https://i.ibb.co/WvRPM9JD/7.jpg', title: 'Wedding Details' },
+    { category: 'wedding', image: 'https://i.ibb.co/yc2hvrrw/8.jpg', title: 'Bridal Portrait' },
+    { category: 'wedding', image: 'https://i.ibb.co/wrMfMN09/9.jpg', title: 'Wedding Couple' },
+    { category: 'wedding', image: 'https://i.ibb.co/Ng405KVn/10.jpg', title: 'Wedding Tradition' },
+    { category: 'wedding', image: 'https://i.ibb.co/S7xHQsD9/11.jpg', title: 'Ceremony Moments' },
+    { category: 'wedding', image: 'https://i.ibb.co/XkfjjTH9/12.jpg', title: 'Wedding Rituals' },
+    { category: 'wedding', image: 'https://i.ibb.co/6pmDD5Z/13.jpg', title: 'Bridal Beauty' },
+    { category: 'wedding', image: 'https://i.ibb.co/pjPjvXLp/14.jpg', title: 'Wedding Festivities' },
+    { category: 'wedding', image: 'https://i.ibb.co/YBBSRsDr/15.jpg', title: 'Traditional Outfits' },
+    { category: 'wedding', image: 'https://i.ibb.co/YF574GtS/16.jpg', title: 'Wedding Couple Portraits' },
+    { category: 'wedding', image: 'https://i.ibb.co/BKQF2QqC/17.jpg', title: 'Bride Portraits' },
+    { category: 'wedding', image: 'https://i.ibb.co/DPcHp42v/18.jpg', title: 'Groom Portraits' },
+    { category: 'wedding', image: 'https://i.ibb.co/bMx47SJ1/19.jpg', title: 'Wedding Decor' },
+    { category: 'wedding', image: 'https://i.ibb.co/VPCfmQD/20.jpg', title: 'Traditional Wedding' },
+    { category: 'wedding', image: 'https://i.ibb.co/VWRdbxhp/21.jpg', title: 'Wedding Celebration' },
+    { category: 'wedding', image: 'https://i.ibb.co/MDCPdcxM/22.jpg', title: 'Bride Preparation' },
+    { category: 'wedding', image: 'https://i.ibb.co/VYZc8nh3/23.jpg', title: 'Groom Preparation' },
+    { category: 'wedding', image: 'https://i.ibb.co/Y75YmZkg/24.jpg', title: 'Wedding Ceremony' },
+    { category: 'wedding', image: 'https://i.ibb.co/mCrgHVp5/25.jpg', title: 'Traditional Rituals' },
+    { category: 'wedding', image: 'https://i.ibb.co/dJ3VG4wt/26.jpg', title: 'Wedding Moments' },
+    { category: 'wedding', image: 'https://i.ibb.co/Zzdj5DhF/27.jpg', title: 'Bridal Portraits' },
+    { category: 'wedding', image: 'https://i.ibb.co/FLB2wZYJ/28.jpg', title: 'Wedding Details' },
+    { category: 'wedding', image: 'https://i.ibb.co/8nZjtfCm/29.jpg', title: 'Traditional Ceremony' },
+    { category: 'wedding', image: 'https://i.ibb.co/mC4151Vq/30.jpg', title: 'Wedding Portraits' },
+    
+    // Portrait Photos (30 images)
+    { category: 'portrait', image: 'https://i.ibb.co/KjfyZp4v/31.jpg', title: 'Studio Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/cj3bN0T/32.jpg', title: 'Family Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/6cJNM2m9/33.jpg', title: 'Professional Headshot' },
+    { category: 'portrait', image: 'https://i.ibb.co/JFF95Q0Z/34.jpg', title: 'Individual Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/5g0PVG8g/35.jpg', title: 'Couple Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/4wJTX5d3/36.jpg', title: 'Children Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/jphyGX1/37.jpg', title: 'Studio Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/Q3vqJ66p/38.jpg', title: 'Portrait Photography' },
+    { category: 'portrait', image: 'https://i.ibb.co/Kk5Tfmc/39.jpg', title: 'Family Photos' },
+    { category: 'portrait', image: 'https://i.ibb.co/KcmnS5tK/40.jpg', title: 'Individual Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/7xSxc1Pq/41.jpg', title: 'Portrait Studio' },
+    { category: 'portrait', image: 'https://i.ibb.co/Sw7LXqNQ/42.jpg', title: 'Professional Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/JwQgP0wf/43.jpg', title: 'Couple Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/Rk9Qd3Hm/44.jpg', title: 'Family Portrait Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/b5DQ3Kt8/45.jpg', title: 'Studio Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/cctXf9dJ/46.jpg', title: 'Portrait Photography' },
+    { category: 'portrait', image: 'https://i.ibb.co/rfyM7vqj/47.jpg', title: 'Individual Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/gM7Pdv4N/48.jpg', title: 'Studio Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/FqHB6JY0/49.jpg', title: 'Professional Headshot' },
+    { category: 'portrait', image: 'https://i.ibb.co/xt8yfTM5/50.jpg', title: 'Portrait Studio' },
+    { category: 'portrait', image: 'https://i.ibb.co/TBnFMW53/51.jpg', title: 'Family Photos' },
+    { category: 'portrait', image: 'https://i.ibb.co/Df1My5FK/52.jpg', title: 'Portrait Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/PGvt0xzt/53.jpg', title: 'Studio Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/mVgzTDC0/54.jpg', title: 'Professional Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/XkV3Npk7/55.jpg', title: 'Individual Session' },
+    { category: 'portrait', image: 'https://i.ibb.co/cXQJXkss/56.jpg', title: 'Portrait Photography' },
+    { category: 'portrait', image: 'https://i.ibb.co/ch2sH7WV/57.jpg', title: 'Studio Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/6JrwRbxd/58.jpg', title: 'Family Portrait' },
+    { category: 'portrait', image: 'https://i.ibb.co/8DDPb3Zj/59.jpg', title: 'Professional Headshot' },
+    { category: 'portrait', image: 'https://i.ibb.co/HLRNYcKV/60.jpg', title: 'Portrait Studio' },
+    
+    // Event Photos (10 images)
+    { category: 'event', image: 'https://i.ibb.co/h1rSknKk/61.jpg', title: 'Birthday Party' },
+    { category: 'event', image: 'https://i.ibb.co/MDQ446v6/62.jpg', title: 'Corporate Event' },
+    { category: 'event', image: 'https://i.ibb.co/7xBXsgwY/63.jpg', title: 'Special Celebration' },
+    { category: 'event', image: 'https://i.ibb.co/QFRHWMf9/64.jpg', title: 'Event Coverage' },
+    { category: 'event', image: 'https://i.ibb.co/SXm51N8C/65.jpg', title: 'Party Photography' },
+    { category: 'event', image: 'https://i.ibb.co/HfCqt3R7/66.jpg', title: 'Corporate Gathering' },
+    { category: 'event', image: 'https://i.ibb.co/SwFj94k2/67.jpg', title: 'Event Photography' },
+    { category: 'event', image: 'https://i.ibb.co/1fRhSPqk/68.jpg', title: 'Birthday Celebration' },
+    { category: 'event', image: 'https://i.ibb.co/JwDbCvkh/69.jpg', title: 'Corporate Event' },
+    { category: 'event', image: 'https://i.ibb.co/0jhKLJG5/70.jpg', title: 'Special Event' },
+    
+    // Commercial Photos (10 images)
+    { category: 'commercial', image: 'https://i.ibb.co/0VJ6hHPg/71.jpg', title: 'Product Photography' },
+    { category: 'commercial', image: 'https://i.ibb.co/FLn6ngg8/72.jpg', title: 'Commercial Shoot' },
+    { category: 'commercial', image: 'https://i.ibb.co/d4XhFVv9/73.jpg', title: 'Product Showcase' },
+    { category: 'commercial', image: 'https://i.ibb.co/d4v2Z5ZK/74.jpg', title: 'Commercial Photography' },
+    { category: 'commercial', image: 'https://i.ibb.co/MxYVkmx9/75.jpg', title: 'Product Display' },
+    { category: 'commercial', image: 'https://i.ibb.co/sJW589b3/76.jpg', title: 'Commercial Shoot' },
+    { category: 'commercial', image: 'https://i.ibb.co/gNSPWxq/77.jpg', title: 'Product Photography' },
+    { category: 'commercial', image: 'https://i.ibb.co/1GHkgpz1/78.jpg', title: 'Commercial Session' },
+    { category: 'commercial', image: 'https://i.ibb.co/hx72Z5TW/79.jpg', title: 'Product Showcase' },
+    { category: 'commercial', image: 'https://i.ibb.co/8gv5bWdR/80.jpg', title: 'Commercial Photography' }
+];
+        
+        // Generate portfolio items
+        const portfolioGrid = document.getElementById('portfolioGrid');
+        
+        function generatePortfolioItems() {
+            portfolioGrid.innerHTML = '';
+            portfolioItems.forEach((item, index) => {
+                const portfolioItem = document.createElement('div');
+                portfolioItem.className = 'portfolio-item';
+                portfolioItem.setAttribute('data-category', item.category);
+                portfolioItem.style.animationDelay = `${index * 0.05}s`;
+                
+                portfolioItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>${item.title}</h3>
+                        <p>${item.category.charAt(0).toUpperCase() + item.category.slice(1)} Photography</p>
+                    </div>
+                    <div class="portfolio-actions">
+                        <a href="${item.image}" class="portfolio-action-btn" download title="Download">
+                            <i class="fas fa-download"></i>
+                        </a>
+                        <a href="${item.image}" class="portfolio-action-btn" target="_blank" title="View Full Size">
+                            <i class="fas fa-expand"></i>
+                        </a>
+                    </div>
+                `;
+                
+                // Add click event to open image in modal
+                portfolioItem.addEventListener('click', () => {
+                    openImageModal(item.image, item.title);
+                });
+                
+                portfolioGrid.appendChild(portfolioItem);
+            });
+            
+            // Animate portfolio items
+            setTimeout(() => {
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                    item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                });
+            }, 500);
+        }
+        
+        generatePortfolioItems();
+        
+        // Image Modal Functionality
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        
+        function openImageModal(imageSrc, title) {
+            modalImage.src = imageSrc;
+            modalImage.alt = title;
+            imageModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        closeModal.addEventListener('click', () => {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Filter portfolio items
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                const portfolioItems = document.querySelectorAll('.portfolio-item');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add camera shutter effect to buttons
+        document.querySelectorAll('.cta-button, .login-btn, .filter-btn, .theme-toggle, .submit-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create a flash effect on the button
+                const flash = document.createElement('div');
+                flash.style.position = 'absolute';
+                flash.style.top = '0';
+                flash.style.left = '0';
+                flash.style.width = '100%';
+                flash.style.height = '100%';
+                flash.style.background = 'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)';
+                flash.style.borderRadius = 'inherit';
+                flash.style.opacity = '0';
+                flash.style.transition = 'opacity 0.3s';
+                flash.style.zIndex = '1';
+                flash.style.pointerEvents = 'none';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(flash);
+                
+                // Trigger flash
+                setTimeout(() => {
+                    flash.style.opacity = '1';
+                }, 10);
+                
+                // Remove flash after animation
+                setTimeout(() => {
+                    flash.style.opacity = '0';
+                    setTimeout(() => {
+                        if (flash.parentNode) {
+                            flash.parentNode.removeChild(flash);
+                        }
+                    }, 300);
+                }, 100);
+            });
+        });
+        
+        // Scroll animations
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.style.padding = '15px 5%';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.padding = '20px 5%';
+                navbar.style.backdropFilter = 'blur(15px)';
+                navbar.style.boxShadow = 'none';
+            }
+            
+            // Animate elements on scroll
+            const animateElements = document.querySelectorAll('.service-card, .portfolio-item, .contact-item, .about-img, .about-content, .contact-info-card, .contact-form');
+            animateElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize scroll animations on load
+        window.dispatchEvent(new Event('scroll'));
+        
+        // Set initial styles for animated elements
+        document.querySelectorAll('.service-card, .portfolio-item, .contact-item, .about-img, .about-content, .contact-info-card, .contact-form').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1)';
+        });
+        
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.querySelector('.hero-bg');
+            if (heroBg) {
+                heroBg.style.transform = `scale(${1 + scrolled * 0.0005}) translateY(${scrolled * 0.1}px)`;
+            }
+        });
+        
+        // Lazy loading for images
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, { rootMargin: '50px' });
+        
+        // Observe all images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+        
+        // Set current year in footer
+        document.querySelector('.copyright').innerHTML = document.querySelector('.copyright').innerHTML.replace('2023', new Date().getFullYear());
+        
+        // Initialize with some animations
+        setTimeout(() => {
+            document.querySelectorAll('.service-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
